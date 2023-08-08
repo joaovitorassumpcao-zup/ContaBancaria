@@ -1,16 +1,16 @@
 package com.catalisa.contabancaria.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ContaBancaria implements Serializable {
 
     @Id
@@ -23,7 +23,7 @@ public class ContaBancaria implements Serializable {
     @Column(nullable = false)
     private String agencia;
 
-    @Column(nullable = false)
+    @Column
     private String nomeUsuario;
 
     @Column(nullable = false)
@@ -32,7 +32,7 @@ public class ContaBancaria implements Serializable {
     @Column(nullable = false)
     private BigDecimal valorFinal;
 
-    @Column(nullable = false)
+    @Column
     private BigDecimal valorTransacao; // Valor para saque ou depósito
 
     @Column(nullable = false)
